@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.vincent.richtexteditor.TextEditorController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open" onAction="#handleOpen"/>
+                <MenuItem text="Save" onAction="#handleSave"/>
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem text="Undo" onAction="#handleUndo"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="textArea" />
+    </center>
+    <bottom>
+        <StackPane style="-fx-background-color: #eee; -fx-padding: 5;">
+            <Label fx:id="statusLabel" text="Ready" />
+        </StackPane>
+    </bottom>
+</BorderPane>
